@@ -1,0 +1,28 @@
+Description of example:
+ -120 seconds
+ -100 nodes
+ -1400m x 1400m area
+ -3 instances per destination
+ -21 data sources per destination
+ -1 anycast destination
+ -Random way point mobility (pause time = 10s, speed = (1,20)s uniform)
+
+HOW TO RUN IT:
+ -open a terminal and paste the following  command
+   cd ~/ns-allinone-2.35/ns-2.35/idmidr_example
+ -open idmidr.tcl file and set rp to IDMIDR or AODV (i.e., set val(rp) IDMIDR or set val(rp) AODV)
+ -open a terminal and paste the following  command
+   ns idmidr.tcl
+
+Output trace is outpout.tr. After analizing it:
+  -PDR (received packets/sent packets) -> IDMIDR = 0.93819, Anycast AODV = 0.581238
+  -Control Overhead (Transmitted bytes by routing protocol) -> IDMIDR = 6798350, Anycast AODV = 19121558
+  -Total Overhead (Total transmitted bytes) -> IDMIDR = 22712978, Anycast AODV = 35165742
+
+IMPORTANT NOTICE
+  -Anycast addresses must be greater than the total number of nodes.
+    For example: if there are 100 nodes in the simulation, anycast
+    addresses must be at least 101.
+  -For AODV, anycast addresses must be greater than or equal to ANYCAST_ADRESS at ~/ns-allinone-2.35/ns-2.35/aodv/aodv.h
+    For example: anycast adresses greater than 100, ANYCAST_ADRESS must be 101, 
+    i.e., #define ANYCAST_ADDRESS 101
