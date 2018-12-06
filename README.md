@@ -15,4 +15,4 @@ Installation:
 
 An example of how to simulate IMDIR and Anycast AODV:`~/ns-allinone-2.35/ns-2.35/idmidr_example`
 
-ns-2.35 with IDMIDR patched was tested on Ubuntu 10.04, 11.04 and Debian 6. A pre-built virtual machine that contains ns-2 with IDMIDR can be obtained from:  [http://www.prime.cic.ipn.mx/~je/idmidr/anycast/virtual_machine.tar.gz](http://www.prime.cic.ipn.mx/~je/idmidr/anycast/virtual_machine.tar.gz)
+ns-2.35 with IDMIDR patched was tested on Ubuntu 10.04, 11.04 and Debian 6.
